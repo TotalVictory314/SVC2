@@ -1,5 +1,9 @@
-transaction Hash: 0x4040c0256003a8c2fa1fc6743b35719e9ddb8bd5
 Sepolia TestNet
+
+
+transaction Hash: 0x4040c0256003a8c2fa1fc6743b35719e9ddb8bd5
+Token Contract Hash: 0xaAdEAe99CfBA0b78a0B15f0E311f3e1B6e457371
+
 
 
 _TOKENPRICE: 10000000000000000
