@@ -1,0 +1,384 @@
+{
+	"compiler": {
+		"version": "0.8.0+commit.c7dfd78e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_admin",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_initialSupply",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "Approval",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "Transfer",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					}
+				],
+				"name": "allowance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "approve",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "burn",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "decimals",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "transfer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFrom",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "ERC20 token representing SurvivalCoin.",
+			"kind": "dev",
+			"methods": {
+				"allowance(address,address)": {
+					"details": "Returns the amount of tokens that an owner has allowed a spender to spend.",
+					"params": {
+						"owner": "The address that owns the tokens.",
+						"spender": "The address that is allowed to spend the tokens."
+					},
+					"returns": {
+						"_0": "The amount of tokens allowed to be spent."
+					}
+				},
+				"approve(address,uint256)": {
+					"details": "Approves the specified address to spend the specified amount of tokens on behalf of the message sender.",
+					"params": {
+						"spender": "The address to approve for spending the tokens.",
+						"value": "The amount of tokens to be spent."
+					},
+					"returns": {
+						"_0": "True if the approval was successful, revert otherwise."
+					}
+				},
+				"balanceOf(address)": {
+					"details": "Returns the balance of the specified address.",
+					"params": {
+						"account": "The address to query the balance of."
+					},
+					"returns": {
+						"_0": "The balance of the specified address."
+					}
+				},
+				"burn()": {
+					"details": "Allows the admin to burn all remaining tokens.",
+					"returns": {
+						"_0": "True if the burn was successful."
+					}
+				},
+				"constructor": {
+					"details": "Constructor to initialize the SurvivalCoin token.",
+					"params": {
+						"_admin": "The address of the admin.",
+						"_initialSupply": "The initial token supply."
+					}
+				},
+				"transfer(address,uint256)": {
+					"details": "Transfers tokens from the sender to the specified recipient.",
+					"params": {
+						"to": "The address to transfer tokens to.",
+						"value": "The amount of tokens to transfer."
+					},
+					"returns": {
+						"_0": "True if the transfer was successful, revert otherwise."
+					}
+				},
+				"transferFrom(address,address,uint256)": {
+					"details": "Transfers tokens from one address to another.",
+					"params": {
+						"from": "The address to transfer tokens from.",
+						"to": "The address to transfer tokens to.",
+						"value": "The amount of tokens to transfer."
+					},
+					"returns": {
+						"_0": "True if the transfer was successful, revert otherwise."
+					}
+				}
+			},
+			"title": "SurvivalCoin",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Upgrade Attempt/SurvivalCoin.sol": "SurvivalCoin"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Upgrade Attempt/ERC20Token.sol": {
+			"keccak256": "0x9d7a455068531183e860826afd975675e2b53da5238fc23bb741eeecac6d996a",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://9ede2acbe91083f998263560d63dc9ae6f3ff283290049615fd3eab8622aeef2",
+				"dweb:/ipfs/QmSv2EDrJ8cdiAfsc6xmq6jXhkpx25E8ETiN6cdi6n2vv9"
+			]
+		},
+		"contracts/Upgrade Attempt/SurvivalCoin.sol": {
+			"keccak256": "0xea289960655d5d016af91d8e4a831141a60606332e560bae15f12193f01843f0",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://ba416cd0448511f5d32c14ab117b6c426096a24aba278697534a0f8410c9d8d4",
+				"dweb:/ipfs/QmZ6QrfvUxTnK7ZcXm3tTJm2XNzLMKVnGsafL7RoBtjkb9"
+			]
+		}
+	},
+	"version": 1
+}

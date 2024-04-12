@@ -1,0 +1,380 @@
+{
+	"compiler": {
+		"version": "0.8.0+commit.c7dfd78e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_admin",
+						"type": "address"
+					},
+					{
+						"internalType": "address payable",
+						"name": "_deposit",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_hardCap",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_saleStart",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_saleDuration",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenTradeStart",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_maxInvestment",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_minInvestment",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "investor",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "tokens",
+						"type": "uint256"
+					}
+				],
+				"name": "Invest",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_newDeposit",
+						"type": "address"
+					}
+				],
+				"name": "changeDepositAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCurrentState",
+				"outputs": [
+					{
+						"internalType": "enum SurvivalCoinICO.State",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "halt",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "hardCap",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "icoState",
+				"outputs": [
+					{
+						"internalType": "enum SurvivalCoinICO.State",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "investTokens",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "maxInvestment",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "minInvestment",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "raisedAmount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "resume",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "saleEnd",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "saleStart",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "token",
+				"outputs": [
+					{
+						"internalType": "contract SurvivalCoin",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tokenPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tokenTradeStart",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"details": "ICO contract for SurvivalCoin.",
+			"kind": "dev",
+			"methods": {
+				"changeDepositAddress(address)": {
+					"details": "Allows the admin to change the deposit address.",
+					"params": {
+						"_newDeposit": "The new deposit address."
+					}
+				},
+				"constructor": {
+					"details": "Constructor to initialize the SurvivalCoin ICO.",
+					"params": {
+						"_admin": "The address of the admin.",
+						"_deposit": "The address of the deposit.",
+						"_hardCap": "The hard cap of the ICO.",
+						"_maxInvestment": "The maximum investment per investor.",
+						"_minInvestment": "The minimum investment per investor.",
+						"_saleDuration": "The duration of the ICO.",
+						"_saleStart": "The start time of the ICO.",
+						"_tokenPrice": "The price of one token in Ether.",
+						"_tokenTradeStart": "The start time for token trading."
+					}
+				},
+				"getCurrentState()": {
+					"details": "Returns the current state of the ICO."
+				},
+				"halt()": {
+					"details": "Allows the admin to halt the ICO."
+				},
+				"investTokens()": {
+					"details": "Allows external callers to invest in the ICO."
+				},
+				"resume()": {
+					"details": "Allows the admin to resume the ICO."
+				}
+			},
+			"title": "SurvivalCoinICO",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Upgrade Attempt/SurvivalCoinICO.sol": "SurvivalCoinICO"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Upgrade Attempt/ERC20Token.sol": {
+			"keccak256": "0x9d7a455068531183e860826afd975675e2b53da5238fc23bb741eeecac6d996a",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://9ede2acbe91083f998263560d63dc9ae6f3ff283290049615fd3eab8622aeef2",
+				"dweb:/ipfs/QmSv2EDrJ8cdiAfsc6xmq6jXhkpx25E8ETiN6cdi6n2vv9"
+			]
+		},
+		"contracts/Upgrade Attempt/SurvivalCoin.sol": {
+			"keccak256": "0xea289960655d5d016af91d8e4a831141a60606332e560bae15f12193f01843f0",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://ba416cd0448511f5d32c14ab117b6c426096a24aba278697534a0f8410c9d8d4",
+				"dweb:/ipfs/QmZ6QrfvUxTnK7ZcXm3tTJm2XNzLMKVnGsafL7RoBtjkb9"
+			]
+		},
+		"contracts/Upgrade Attempt/SurvivalCoinICO.sol": {
+			"keccak256": "0xab17e913ff5a1faca53b882c05da82328a5faadac641a6db6a55986131db90d3",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://99aae9ff78fecb949ff471145801b87fa12b545b67f2702f3ba2290c5d5dfc2a",
+				"dweb:/ipfs/QmU8Yf2sWC7VQWZuSg6F65bRpWGCVCMcZG6YDDbV8Kh8kL"
+			]
+		}
+	},
+	"version": 1
+}
